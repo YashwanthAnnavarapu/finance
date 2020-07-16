@@ -10,7 +10,7 @@ import face_recognition
 
 app = Flask(__name__)
 
-@app.route('/api',methos=['POST'])
+@app.route('/api',methods=['POST'])
 def index():
     msg={}
     data = request.get_json()
