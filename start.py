@@ -60,7 +60,7 @@ def face_encoding(image):
         # checking if there are multiple faces
         if (len(faceLoc) == 1):#if the image consists of single face
             encode_img = face_recognition.face_encodings(img)
-            return True, encode_img
+            return True, encode_img[0]
         elif(len(faceLoc) > 1):
             return False, "-1"
         else:
@@ -81,7 +81,7 @@ def upload_details(token, encode_img):
         return False
 
     # storing the encoded value
-    json_decoded[token] = str(encode_img[0])
+    json_decoded[token] = str(encode_img)
     json.dump(json_decoded, open("json.json", 'w'))
 
     return True
