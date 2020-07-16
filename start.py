@@ -81,7 +81,7 @@ def upload_details(token, encode_img):
         return False
 
     # storing the encoded value
-    json_decoded[token] = str(encode_img)[7:-2]
+    json_decoded[token] = str(encode_img[0])
     json.dump(json_decoded, open("json.json", 'w'))
 
     return True
