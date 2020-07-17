@@ -42,7 +42,7 @@ def index():
             status, key = find(encode_image)
             if (status != False and key != False):
                 msg['msg'] = '3'
-                msg['token'] = token
+                msg['token'] = key
             else:
                 msg['token'] = '4'
     else:
