@@ -102,5 +102,12 @@ def find(encode_img):
     return False, False
 
 
+@app.route('/json')
+def jsonData():
+    json_file = open('json.json')
+    json_decoded = json.load(json_file)
+
+    return json_decoded
+
 if __name__ == '__main__':
     app.run(debug=True)
