@@ -103,7 +103,7 @@ def find(encode_img):
 @app.route('/json')
 def json():
     temp={}
-    json_file = open("json.json")
+    json_file = open("json.json",)
     json_decoded = json.load(json_file)
     
     for k, v in dict(json_decoded).items():
