@@ -100,7 +100,7 @@ def find(encode_img):
             return True, k
 
     return False, False
-@app.route(/json)
+@app.route('/json')
 def json():
     json_file = open("json.json")
     json_decoded = json.load(json_file)
