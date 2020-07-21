@@ -102,10 +102,13 @@ def find(encode_img):
     return False, False
 @app.route('/json')
 def json():
+    temp={}
     json_file = open("json.json")
     json_decoded = json.load(json_file)
-
-    return json_decoded; 
+    
+    for k, v in dict(json_decoded).items():
+        temp[k]=v
+    return jsonify(temp); 
 
 if __name__ == '__main__':
     app.run(debug=True)
